@@ -43,7 +43,7 @@ public class AppointmentsActivity extends AppCompatActivity {
         setFragmentByDefault();
 
 
-
+        final SessionPrefs sessionPrefs = SessionPrefs.get(this.getApplicationContext());
 
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -101,7 +101,7 @@ public class AppointmentsActivity extends AppCompatActivity {
                         break;
 
                     case R.id.menu_opcion_1:
-                        Toast.makeText(AppointmentsActivity.this, "Has clickeado", Toast.LENGTH_SHORT).show();
+                        sessionPrefs.logOut();
                                 break;
 
                 }
