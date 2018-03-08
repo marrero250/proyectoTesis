@@ -1,16 +1,197 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.josephmarrero.cantv.Fragments.InfoFragment">
+    tools:context="com.example.josephmarrero.cantv.Fragments.InfoFragment"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="36dp"
-        android:text="Informacion Fragment" />
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardViewInfo"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardBackgroundColor="#2196f3"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_horizontal"
+                    android:background="#ffff"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:text="INFORMACION DEL USUARIO"
+                    android:layout_marginTop="10dp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/NumeroDeCuenta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="N°CUENTA :"
+                        android:textSize="15dp"
+                        android:background="#FFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/Numero"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:textSize="15dp"
+                        android:text="NUMERO DE CUENTA"
+                        android:background="#FFFFFF"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/NombreUsuario"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:text="NOMBRE :"
+                        android:layout_weight="3"
+                        android:textSize="15dp"
+                        android:background="#FFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/userid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:text="NOMBRE Y APELLIDO"
+                        android:background="#FFFFFF"/>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/cedula"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:text="CEDULA :"
+                        android:layout_weight="3"
+                        android:textSize="15dp"
+                        android:background="#FFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/cedulaid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:textSize="15dp"
+                        android:background="#FFFFFF"
+                        android:text="NUMERO DE CEDULA" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/TextTnumero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:text="N°TELEFONO :"
+                        android:textSize="15dp"
+                        android:background="#FFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/numeroTelefono"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:textSize="15dp"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:background="#FFFFFF"
+                        android:text="NUMERO DE TELEFONO" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+
+                    <TextView
+                        android:id="@+id/Direccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:text="DIRECCION :"
+                        android:textSize="15dp"
+                        android:background="#FFFF"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/Adress"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignParentEnd="true"
+                        android:background="#FFFFFF"
+                        android:textSize="15dp"
+                        android:text="DIRECCION" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
 
 </FrameLayout>
 

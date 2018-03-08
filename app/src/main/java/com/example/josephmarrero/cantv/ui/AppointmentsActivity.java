@@ -102,7 +102,8 @@ public class AppointmentsActivity extends AppCompatActivity {
 
                     case R.id.menu_opcion_1:
                         sessionPrefs.logOut();
-                                break;
+
+                        break;
 
                 }
 
@@ -180,6 +181,7 @@ public class AppointmentsActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            
             return true;
         }
 
