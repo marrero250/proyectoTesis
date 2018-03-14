@@ -4,7 +4,7 @@
     <string name="title_activity_login">"Inicio de sesión"</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_user_id">Número de identificación</string>
+    <string name="prompt_user_id">Número de cedula</string>
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Iniciar sesión</string>
     <string name="action_sign_in_short">Iniciar sesión</string>

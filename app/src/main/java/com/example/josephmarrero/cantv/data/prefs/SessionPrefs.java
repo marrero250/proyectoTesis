@@ -18,6 +18,8 @@ public class SessionPrefs {
     public static final String PREF_AFFILIATE_ADDRESS = "PREF_AFFILIATE_ADDRESS";
     public static final String PREF_AFFILIATE_GENDER = "PREF_AFFILIATE_GENDER";
     public static final String PREF_AFFILAITE_TOKEN = "PREF_AFFILAITE_TOKEN";
+    public static final String PREF_AFFILAITE_NUMID = "PREF_AFFILAITE_NUMBERID";
+    public static final String PREF_AFFILAITE_NUMTELE = "PREF_AFFILAITE_NUMTELE";
 
     private final SharedPreferences mPrefs;
 
@@ -53,6 +55,8 @@ public class SessionPrefs {
             editor.putString(PREF_AFFILIATE_ADDRESS, affiliate.getAddress());
             editor.putString(PREF_AFFILIATE_GENDER, affiliate.getGender());
             editor.putString(PREF_AFFILAITE_TOKEN, affiliate.getToken());
+            editor.putString(PREF_AFFILAITE_NUMID, affiliate.getNumero_cuenta());
+            editor.putString(PREF_AFFILAITE_NUMTELE, affiliate.getTelefono());
             editor.apply();
 
             mIsLoggedIn = true;
@@ -67,6 +71,8 @@ public class SessionPrefs {
         editor.putString(PREF_AFFILIATE_ADDRESS, null);
         editor.putString(PREF_AFFILIATE_GENDER, null);
         editor.putString(PREF_AFFILAITE_TOKEN, null);
+        editor.putString(PREF_AFFILAITE_NUMTELE, null);
+        editor.putString(PREF_AFFILAITE_NUMID, null);
         editor.apply();
     }
 }

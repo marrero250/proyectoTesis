@@ -42,6 +42,7 @@ public class LoginActivity extends AppCompatActivity  {
     private Retrofit mRestAdapter;
     private CantvApi mCantvApi;
 
+    Affiliate affiliate;
 
     // UI references.
     private ImageView mLogoView;
@@ -180,8 +181,15 @@ public class LoginActivity extends AppCompatActivity  {
                         return;
                     }
 
+                    Log.d("ApiResponse", response.body().toString());
+
+                    affiliate = response.body();
+                    Toast.makeText(LoginActivity.this, "Nombre: " + affiliate.getName(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Address: " + affiliate.getAddress(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Cedula: " + affiliate.getId(), Toast.LENGTH_SHORT).show();
+
                     // Guardar afiliado en preferencias
-                    SessionPrefs.get(LoginActivity.this).saveAffiliate(response.body());
+                    SessionPrefs.get(LoginActivity.this).saveAffiliate(affiliate);
 
                     // Ir a la citas médicas
                     showAppointmentsScreen();

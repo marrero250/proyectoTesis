@@ -85,7 +85,7 @@
                         android:textStyle="bold"/>
 
                     <TextView
-                        android:id="@+id/userid"
+                        android:id="@+id/nameid"
                         android:layout_width="fill_parent"
                         android:layout_height="25dp"
                         android:layout_weight="1"

@@ -9,19 +9,24 @@ package com.example.josephmarrero.cantv.data.api.model;
  */
 
 public class Affiliate {
-
+    private String numero_cuenta;
+    private String telefono;
     private String id;
     private String name;
     private String address;
     private String gender;
     private String token;
 
-    public Affiliate(String id, String name, String address, String gender, String token) {
+
+
+    public Affiliate(String id, String name, String address, String gender, String token, String telefono, String numero_cuenta) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.gender = gender;
         this.token = token;
+        this.telefono = telefono;
+        this.numero_cuenta = numero_cuenta;
     }
 
     public String getId() {
@@ -62,6 +67,24 @@ public class Affiliate {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getNumero_cuenta() {
+        return numero_cuenta;
+    }
+
+    public void setNumero_cuenta(String numero_cuenta) {
+        this.numero_cuenta = numero_cuenta;
+    }
+
+
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
 }

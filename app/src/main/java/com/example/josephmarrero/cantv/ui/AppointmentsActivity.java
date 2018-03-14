@@ -32,6 +32,7 @@ public class AppointmentsActivity extends AppCompatActivity {
     private NavigationView navigationView;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,6 @@ public class AppointmentsActivity extends AppCompatActivity {
         setFragmentByDefault();
 
 
-        final SessionPrefs sessionPrefs = SessionPrefs.get(this.getApplicationContext());
 
         drawerLayout.addDrawerListener(new DrawerLayout.DrawerListener() {
             @Override
@@ -101,7 +101,7 @@ public class AppointmentsActivity extends AppCompatActivity {
                         break;
 
                     case R.id.menu_opcion_1:
-                        sessionPrefs.logOut();
+
 
                         break;
 
@@ -124,11 +124,11 @@ public class AppointmentsActivity extends AppCompatActivity {
 
         }
 
-       /* setContentView(R.layout.activity_appointments);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+       /*setContentView(R.layout.activity_appointments);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+       /* FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,6 +170,8 @@ public class AppointmentsActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
 
+        final SessionPrefs sessionPrefs = SessionPrefs.get(this.getApplicationContext());
+
         switch (item.getItemId()){
             case android.R.id.home:
                 //abrir el menu lateral
@@ -181,7 +183,15 @@ public class AppointmentsActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
             
+            return true;
+        }
+        if (id == R.id.Logout) {
+            sessionPrefs.logOut();
+            Toast.makeText(this, "Saliendo del App", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, LoginActivity.class));
+
             return true;
         }
 
