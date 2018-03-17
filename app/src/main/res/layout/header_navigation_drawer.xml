@@ -4,7 +4,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:scaleType="centerCrop"
         android:src="@drawable/fe"
         />
@@ -19,7 +19,6 @@
         android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:textColor="#FFFF"
-
-        />
+        android:id="@+id/textheader"/>
 
 </FrameLayout>

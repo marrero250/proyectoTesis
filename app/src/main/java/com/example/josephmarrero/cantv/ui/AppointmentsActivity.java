@@ -1,5 +1,6 @@
 package com.example.josephmarrero.cantv.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,9 +13,11 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.josephmarrero.cantv.Fragments.InfoFragment;
@@ -39,9 +42,14 @@ public class AppointmentsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setToolbar();
 
+
+
+
+
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.navview);
         setFragmentByDefault();
+
 
 
 
