@@ -9,7 +9,7 @@
             android:title="Informacion" />
         <item
             android:id="@+id/menu_solicitudes"
-            android:icon="@drawable/mapasybandera"
+            android:icon="@android:drawable/ic_menu_edit"
             android:title="Solicitudes" />
         <item
             android:id="@+id/menu_pagos"

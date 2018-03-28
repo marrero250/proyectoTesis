@@ -1,4 +1,5 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,94 +12,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#FFFF">
 
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:gravity="center_horizontal"
             android:background="#ffff"
             android:textColor="@color/colorPrimary"
-            android:textSize="22dp"
+            android:textSize="18dp"
             android:textStyle="bold"
-            android:text="ESTATUS DE SERVICIOS"
+            android:layout_marginTop="10dp"
+            android:text="PLANES LOCALES TELEFONIA FIJA"
             />
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="5dp">
-
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
-                android:text="TELEFONO: "
-                android:textSize="18dp"
+                android:text="PLANES LOCALES: "
+                android:textSize="16dp"
                 android:textStyle="bold"
                 android:textColor="#000000"/>
 
-            <TextView
-                android:id="@+id/statusTelefono"
+            <Spinner
+                android:id="@+id/spinnerPlanesLocales"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:textSize="18dp"
-                android:text="ESTATUS DE SERVICIO"/>
+                android:layout_height="wrap_content"
+
+                />
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="5dp">
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:text="INTERNET: "
-                android:textSize="18dp"
-                android:textStyle="bold"
-                android:textColor="#000000"/>
-
-            <TextView
-                android:id="@+id/statusInternet"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:textSize="18dp"
-                android:text=" ESTATUS DE SERVICIO"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingTop="5dp">
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:text="PLAN DE INTERNET: "
-                android:textSize="18dp"
-                android:textColor="#000000"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:id="@+id/planDeInternet"
-                android:layout_width="match_parent"
-                android:layout_height="25dp"
-                android:textSize="18dp"
-                android:text=" ABA 10Mbps"/>
-        </LinearLayout>
 
         <TextView
-            android:id="@+id/title"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -106,47 +63,57 @@
             android:gravity="center_horizontal"
             android:background="#ffff"
             android:textColor="@color/colorPrimary"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold"
             android:text="ACTIVACION DE SERVICIOS"
-            android:paddingTop="10dp"
+
             />
 
         <Switch
-            android:id="@+id/switchTelefono"
+            android:id="@+id/switchIdentiLlamadas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ACTIVAR TELEFONO"
-            android:textSize="17dp"
+            android:text="IDENTIFICADOR DE LLAMADAS"
+            android:textSize="16dp"
             android:paddingTop="1dp"
             android:textColor="#000000"/>
 
         <Switch
-            android:id="@+id/switchInternet"
+            android:id="@+id/switchBloqueoNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ACTIVAR INTERNET"
-            android:textSize="17dp"
+            android:text="BLOQUEO NUMERO '0' "
+            android:textSize="16dp"
+            android:paddingTop="1dp"
+            android:textColor="#000000"/>
+
+
+        <Switch
+            android:id="@+id/switchBuzonDeMensajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUZÓN DE MENSAJES"
+            android:textSize="16dp"
             android:paddingTop="1dp"/>
 
         <Switch
-            android:id="@+id/switchFirewall"
+            android:id="@+id/switchFirewall1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="FIREWALL"
-            android:textSize="17dp"
+            android:textSize="16dp"
             android:paddingTop="1dp"/>
 
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:gravity="center_horizontal"
             android:background="#ffff"
             android:textColor="@color/colorPrimary"
-            android:textSize="22dp"
+            android:textSize="18dp"
             android:textStyle="bold"
            android:layout_marginTop="10dp"
             android:text="CAMBIO DE PLAN INTERNET"
@@ -174,8 +141,51 @@
         </LinearLayout>
 
 
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="SUSPENSION TEMPORAL Y RECONEXION"
+
+            />
+
+        <Switch
+            android:id="@+id/switchTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TELEFONIA FIJA"
+            android:textSize="16dp"
+            android:paddingTop="1dp"
+            android:textColor="#000000"/>
+
+        <Switch
+            android:id="@+id/switchInternet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTERNET"
+            android:textSize="16dp"
+            android:paddingTop="1dp"
+            android:textColor="#000000"/>
+
+
+        <Switch
+            android:id="@+id/switchTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TV SATELITAL"
+            android:textSize="16dp"
+            android:paddingTop="1dp"/>
 
 
     </LinearLayout>
+
+
 
 </FrameLayout>

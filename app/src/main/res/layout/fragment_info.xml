@@ -1,3 +1,8 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,7 +14,6 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.josephmarrero.cantv.Fragments.InfoFragment">
-
 
 
         <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -39,7 +43,7 @@
                 android:gravity="center_horizontal"
                 android:background="#ffff"
                 android:textColor="@color/colorPrimary"
-                android:textSize="22dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:text="INFORMACION DEL USUARIO"
                 />
@@ -55,7 +59,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="25dp"
                             android:text="N°CUENTA :"
-                            android:textSize="18dp"
+                            android:textSize="16dp"
                             android:background="#FFFF"
                             android:textStyle="bold"/>
 
@@ -63,7 +67,7 @@
                             android:id="@+id/Numero"
                             android:layout_width="fill_parent"
                             android:layout_height="25dp"
-                            android:textSize="18dp"
+                            android:textSize="16dp"
                             android:text="NUMERO DE CUENTA"
                             android:background="#FFFFFF"
                             android:gravity="right"/>
@@ -83,7 +87,7 @@
                     android:layout_height="25dp"
                     android:text="NOMBRE:"
                     android:layout_weight="3"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="#FFFF"
                     android:textStyle="bold"/>
 
@@ -93,7 +97,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="25dp"
                     android:layout_weight="1"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:text="NOMBRE Y APELLIDO"
                     android:background="#FFFFFF"/>
 
@@ -112,7 +116,7 @@
                     android:layout_height="25dp"
                     android:text="CEDULA :"
                     android:layout_weight="3"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="#FFFF"
                     android:textStyle="bold"/>
 
@@ -123,7 +127,7 @@
                     android:layout_alignBottom="@+id/linearLayout"
                     android:layout_alignParentEnd="true"
                     android:layout_weight="1"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="#FFFFFF"
                     android:text="NUMERO DE CEDULA"
                     android:gravity="right"/>
@@ -142,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:text="N°TELEFONO:"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="#FFFF"
                     android:textStyle="bold"/>
 
@@ -150,7 +154,7 @@
                     android:id="@+id/numeroTelefono"
                     android:layout_width="fill_parent"
                     android:layout_height="25dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:layout_alignBottom="@+id/linearLayout"
                     android:layout_alignParentEnd="true"
                     android:background="#FFFFFF"
@@ -172,7 +176,7 @@
                     android:layout_height="50dp"
                     android:background="#FFFF"
                     android:text="DIRECCION:"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -183,7 +187,7 @@
                     android:layout_alignParentEnd="true"
                     android:background="#FFFFFF"
                     android:text=" DIRECCION"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:gravity="right"/>
 
             </LinearLayout>
@@ -222,7 +226,7 @@
                 android:gravity="center_horizontal"
                 android:background="#ffff"
                 android:textColor="@color/colorPrimary"
-                android:textSize="22dp"
+                android:textSize="20dp"
                 android:textStyle="bold"
                 android:text="ESTADO DE SOLICITUDES"
                 />
@@ -243,7 +247,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:text="N°SOLICITUD :"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="#FFFF"
                     android:textStyle="bold"/>
 
@@ -251,7 +255,7 @@
                     android:id="@+id/numeroDeSolicitud"
                     android:layout_width="fill_parent"
                     android:layout_height="25dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:layout_alignBottom="@+id/linearLayout"
                     android:layout_alignParentEnd="true"
                     android:background="#FFFFFF"
@@ -271,7 +275,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:text="ESTADO :"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:background="#FFFF"
                     android:textStyle="bold"/>
 
@@ -279,7 +283,7 @@
                     android:id="@+id/estatuDeLaSolicitud"
                     android:layout_width="fill_parent"
                     android:layout_height="25dp"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:layout_alignBottom="@+id/linearLayout"
                     android:layout_alignParentEnd="true"
                     android:background="#FFFFFF"
@@ -300,18 +304,18 @@
                     android:layout_height="90dp"
                     android:background="#FFFF"
                     android:text="INFORMACIÓN :"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/informacionDeLaSolicitud"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:layout_alignBottom="@+id/linearLayout"
                     android:layout_alignParentEnd="true"
                     android:background="#FFFFFF"
                     android:text="INFORMACIÓN DE LA SOLCITUD"
-                    android:textSize="18dp"
+                    android:textSize="16dp"
                     android:gravity="right"/>
 
             </LinearLayout>
@@ -322,7 +326,119 @@
         </android.support.v7.widget.CardView>
 
 
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewStatusServicios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="370dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardBackgroundColor="#FFFF"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center_horizontal"
+                android:background="#ffff"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="ESTATUS DE SERVICIOS"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="TELEFONO: "
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/statusTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:gravity="right"
+                    android:textSize="16dp"
+                    android:text="ESTATUS DE SERVICIO"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="INTERNET: "
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"/>
+
+                <TextView
+                    android:id="@+id/statusInternet"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textSize="16dp"
+                    android:gravity="right"
+                    android:text=" ESTATUS DE SERVICIO"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="PLAN DE INTERNET: "
+                    android:textSize="16dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/planDeInternet"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textSize="16dp"
+                    android:text=" ABA 10Mbps"
+                    android:gravity="right"/>
+            </LinearLayout>
+
+            </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
 
 
 </FrameLayout>
 
+    </ScrollView>

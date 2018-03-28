@@ -18,4 +18,33 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <string-array name="Planes_locales">
+            <item>Plan limitado</item>
+            <item>Plan tarifa plana residencial</item>
+            <item>Plan clásico</item>
+            <item>Plan Básico (Sólo para Prepago)</item>
+            <item>Plan habla más por menos</item>
+            <item>Plan habla por llamadas</item>
+            <item>Plan más minutos para todos</item>
+            <item>Súper más minutos para todos</item>
+        </string-array>
+
+    <string-array name="Planes_Aba">
+        <item>2Mbps</item>
+        <item>3Mbps</item>
+        <item>6Mbps</item>
+        <item>10Mbps</item>
+    </string-array>
+
+    <string-array name="Reporte_Averias">
+        <item>No tengo tono telefonico</item>
+        <item>Mi modem no enciende</item>
+        <item>No tengo servicio de internet</item>
+        <item>Otro(especificar)</item>
+        <item></item>
+    </string-array>
+
+
+
 </resources>

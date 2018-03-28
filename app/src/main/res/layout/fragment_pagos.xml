@@ -16,7 +16,7 @@
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardViewPago"
+        android:id="@+id/cardViewInfoPago"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:clickable="true"
@@ -44,7 +44,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_gravity="start"
-                    android:text=" NOMBRE CLIENTES"
+                    android:text=" NOMBRE CLIENTE"
                     android:textStyle="bold"
                     android:textColor="#000"/>
                     <TextView
@@ -111,7 +111,6 @@
 
 
                     <TextView
-                        android:id="@+id/textViewCargoAnteriores"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -136,14 +135,13 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewCargoAnteriores"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:layout_marginLeft="5dp"
                         android:text="Saldo Anterior" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoSaldoAnterior"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -158,14 +156,13 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewCargoAnteriores"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:layout_marginLeft="5dp"
                         android:text="Pagos recibidos" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoPagosRecibido"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -189,7 +186,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoTotalCargosAnterior"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
@@ -233,7 +230,7 @@
 
 
                         <TextView
-                            android:id="@+id/textViewCargoAnteriores"
+                            android:id="@+id/textViewCargoResumenfactura1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="5dp"
@@ -254,7 +251,7 @@
                             android:layout_marginLeft="5dp"
                             android:text="Rentas Básicas" />
                         <TextView
-                            android:id="@+id/textViewMontoCargosAnterior"
+                            android:id="@+id/textViewMontoRentaBasica"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="right"
@@ -273,7 +270,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Llamadas locales" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoLlamadaslocales"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -292,7 +289,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Llamadas Nacionales" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoLlamadasNacionales"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -312,7 +309,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Llamadas Celulares" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoLlamadasCelulares"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -331,7 +328,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Cargos por servicio de internet" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoCargosporServicioInternet"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -351,7 +348,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Cobro por ventas de equipos" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoCargosVentasEquipos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -372,7 +369,7 @@
                         android:layout_marginLeft="5dp"
                         android:text="Iva 12 %" />
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoIva"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="right"
@@ -387,7 +384,7 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/textViewCargoAnteriores"
+                        android:id="@+id/textViewTotalCargoMes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -396,7 +393,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontoTotalMes"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
@@ -414,7 +411,6 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:id="@+id/textViewCargoAnteriores"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
@@ -423,7 +419,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textViewMontoCargosAnterior"
+                        android:id="@+id/textViewMontototalAPagar"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
@@ -444,7 +440,6 @@
 
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardViewPago"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
