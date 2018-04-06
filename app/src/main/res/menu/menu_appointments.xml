@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="1"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        android:visible="false"/>
+    <item
+        android:id="@+id/Logout"
+        android:icon="@drawable/logout"
+        android:orderInCategory="1"
+        android:title="Logout"
+        android:visible="true"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/Refreshoption"
+        android:icon="@drawable/refresh"
+        android:orderInCategory="1"
+        android:title="Refresh"
+        android:visible="true"
+        app:showAsAction="never"
+        />
+</menu>

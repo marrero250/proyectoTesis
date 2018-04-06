@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_info"
+            android:icon="@android:drawable/ic_dialog_info"
+            android:title="Informacion" />
+        <item
+            android:id="@+id/menu_solicitudes"
+            android:icon="@drawable/listachek"
+            android:title="Solicitudes" />
+        <item
+            android:id="@+id/menu_pagos"
+            android:icon="@drawable/factura"
+            android:title="Pagos" />
+        <item
+            android:id="@+id/menu_soporte"
+            android:icon="@drawable/soportetec"
+            android:title="Soporte Tecnico" />
+        <item
+            android:id="@+id/menu_reclamos"
+            android:icon="@drawable/reclamos"
+            android:title="Reclamos" />
+    </group>
+
+    <item android:title="Otras Opciones">
+    <menu>
+        <item
+        android:id="@+id/menu_opcion_1"
+        android:icon="@drawable/refresh"
+        android:title="Refresh"/>
+    <item
+        android:id="@+id/menu_opcion_2"
+        android:icon="@drawable/settings"
+        android:title="Opcion"/>
+        </menu>
+    </item>
+</menu>

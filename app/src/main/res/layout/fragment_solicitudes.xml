@@ -1,0 +1,244 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.josephmarrero.cantv.Fragments.SolicitudesFragment"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFF">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:text="PLANES LOCALES TELEFONIA FIJA"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="PLANES LOCALES: "
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <Spinner
+                android:id="@+id/spinnerPlanesLocales"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="ACTIVACION DE SERVICIOS"
+
+            />
+
+
+        <Switch
+            android:id="@+id/switchIdentiLlamadas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Identificador de Llamadas"
+            android:textSize="16dp"
+            android:paddingTop="1dp"
+            android:textColor="#000000"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Identifica y graba todas las llamadas que recibes en tu hogar"
+            android:layout_marginStart="10dp"/>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <Switch
+            android:id="@+id/switchBloqueoNumero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cantv Bloqueos"
+            android:textSize="16dp"
+            android:paddingTop="4dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloqueo de llamadas de larga distancia nacional e internacional, celulares y números 0900" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary" />
+
+
+        <Switch
+            android:id="@+id/switchBuzonDeMensajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buzón de Mensajes"
+            android:textSize="16dp"
+            android:paddingTop="4dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Recibe mensajes cuando tu teléfono se encuentre ocupado, averiado o cuando no puedas contestar"/>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary" />
+
+        <Switch
+            android:id="@+id/switchFirewall1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Firewall"
+            android:textSize="16dp"
+            android:paddingTop="1dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Controla el acceso de una computadora a la red y de elementos de la red a la computadora, por motivos de seguridad."/>
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:textStyle="bold"
+           android:layout_marginTop="10dp"
+            android:text="CAMBIO DE PLAN INTERNET"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="ABA INTERNET: "
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <Spinner
+                android:id="@+id/spinnerPlanesAba"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            android:background="#ffff"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="SUSPENSION TEMPORAL Y RECONEXION"
+
+            />
+
+        <Switch
+            android:id="@+id/switchTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TELEFONIA FIJA"
+            android:textSize="16dp"
+            android:paddingTop="1dp"
+            android:textColor="#000000"/>
+
+        <Switch
+            android:id="@+id/switchInternet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTERNET"
+            android:textSize="16dp"
+            android:paddingTop="1dp"
+            android:textColor="#000000"/>
+
+
+        <Switch
+            android:id="@+id/switchTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TV SATELITAL"
+            android:textSize="16dp"
+            android:paddingTop="1dp"/>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>
+</ScrollView>
