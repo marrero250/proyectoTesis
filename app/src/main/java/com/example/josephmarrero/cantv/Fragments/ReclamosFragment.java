@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.josephmarrero.cantv.R;
@@ -21,6 +22,8 @@ import com.example.josephmarrero.cantv.R;
 public class ReclamosFragment extends Fragment {
 
     private boolean isFirsTime = true;
+    TextView numeroReclamo;
+    TextView estatusReclamo;
 
     public ReclamosFragment() {
         // Required empty public constructor
@@ -35,13 +38,14 @@ public class ReclamosFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_reclamos,container,false);
 
         Spinner spinnerReclamos = (Spinner) view.findViewById(R.id.spinnerReclamos);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(),R.array.Reporte_Averias, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(),R.array.Reclamos, android.R.layout.simple_spinner_item);
 
 
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinnerReclamos.setAdapter(adapter);
 
-
+        numeroReclamo = (TextView) view.findViewById(R.id.numeroreclamo);
+        estatusReclamo = (TextView) view.findViewById(R.id.estatusReclamo);
 
         spinnerReclamos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -50,7 +54,9 @@ public class ReclamosFragment extends Fragment {
                 if (isFirsTime){
                     isFirsTime = false;
                 }else {
-                    Toast.makeText(adapterView.getContext(), "Su plan a sido cambiado con exito a " + (String) adapterView.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(adapterView.getContext(), "Recuerde que los tiempos de respuesta para " + (String) adapterView.getItemAtPosition(position) + " varian entren 24 y 48 horas habiles", Toast.LENGTH_LONG).show();
+                    numeroReclamo.setText("100010");
+                    estatusReclamo.setText("POR ASIGNAR");
                 }
 
             }

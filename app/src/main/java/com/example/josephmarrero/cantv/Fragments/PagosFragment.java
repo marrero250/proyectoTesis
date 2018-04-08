@@ -5,19 +5,26 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.josephmarrero.cantv.R;
 import com.example.josephmarrero.cantv.data.api.CantvApi;
 import com.example.josephmarrero.cantv.data.api.model.Affiliate;
 import com.example.josephmarrero.cantv.data.api.model.ApiError;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 
@@ -39,6 +46,17 @@ public class PagosFragment extends Fragment {
     private Retrofit mRestAdapter;
     private CantvApi mCantvApi;
     private Affiliate affiliate;
+    String Clavesecreta;
+    String unica;
+    String clavesecreta;
+    boolean tarjetacorrecta;
+    int Saldotelefono;
+    int SaldoInternet;
+    int tarjetaunica = 10000;
+    String clave = "123456789";
+    int totalsaldotelefono;
+    int totalsaldoInternet;
+    boolean isFirstime4 = true;
 
     String PREF_AFFILIATE_ID = "PREF_USER_ID";
     String PREF_AFFILAITE_SERVICIO_TELEFONO = "PREF_AFFILAITE_SERVICIO_TELEFONO";
@@ -77,7 +95,7 @@ public class PagosFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(final View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
 
@@ -117,18 +135,114 @@ public class PagosFragment extends Fragment {
         affiliate = new Affiliate(userid, username,useraddress,gender,token,numtele,numcuenta,switchfirewall,switchidentificadorllamadas,switchbloqueocero,stelefono,sinternet,stvsatelital,
                 estatusaveria, informacionaveria, aba, planlocal, buzondemensajes);
 
-
+        final Spinner spinnerSaldoprepago = (Spinner) view.findViewById(R.id.spinnerSaldoPrepago);
         Spinner spinnerPrepago = (Spinner) view.findViewById(R.id.spinnerRecargaPrepago);
+        final Button btnEnviarRecarga = (Button) view.findViewById(R.id.buttomRecarga);
+        final EditText clavesercretaunica = (EditText) view.findViewById(R.id.clavesecretaunica);
+        final TextView nombreRecarga = (TextView) view.findViewById(R.id.NombreRecarga);
+        final TextView Montorecarga = (TextView) view.findViewById(R.id.textViewRecargaPrepago);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this.getContext(), R.array.Recarga_Prepago, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spinnerPrepago.setAdapter(adapter);
 
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this.getContext(), R.array.Recarga_Prepago, android.R.layout.simple_spinner_item);
+        adapter1.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        spinnerSaldoprepago.setAdapter(adapter1);
+
         spinnerPrepago.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, final int position, long id) {
                 parent.getItemAtPosition(position);
                 //PENDIENTE POR CREAR LA VARIABLE Y recibiarla
+
+                if (isFirstime4){
+                    isFirstime4 = false;
+                }else {
+
+
+                    btnEnviarRecarga.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            // clavesercretaunica.getText();
+                            // clavesercretaunica.setText(Clavesecreta);
+                            clavesecreta = clavesercretaunica.getText().toString();
+
+                            tarjetacorrecta = false;
+
+                       //    validartarjeta(clavesecreta);
+
+                            if (validartarjeta(clavesecreta)) {
+                                switch (position) {
+                                    case (0):
+                                        Toast.makeText(getView().getContext(), "Por favor seleccionar una opcion" + position, Toast.LENGTH_SHORT).show();
+                                        break;
+                                    case (1):
+
+                                        totalsaldotelefono = Saldotelefono + tarjetaunica;
+
+                                        Toast.makeText(getContext(), "Recargado con exito telefonia prepago \n" +
+                                                "Monto: Bs10000  \n" +
+                                                "Total Saldo Telefono:"+ totalsaldotelefono, Toast.LENGTH_LONG).show();
+                                        break;
+                                    case (2):
+                                        totalsaldoInternet = SaldoInternet + tarjetaunica;
+                                        Toast.makeText(getContext(), "Recargado con exito Internet prepago \n" +
+                                                "Monto: Bs10000  \n" +
+                                                "Total Saldo Internet:"+ totalsaldoInternet, Toast.LENGTH_LONG).show();
+                                        break;
+                                }
+                            } else {
+
+                                Toast.makeText(getView().getContext(), "Introduzca una tarjeta valida", Toast.LENGTH_SHORT).show();
+
+
+                            }
+
+
+                        }
+                    });
+
+
+                }
+            }
+
+
+            private boolean validartarjeta(String clavesecreta) {
+                //TODO: Replace this with your own logic
+
+
+
+                return clavesecreta.length() > 8;
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        spinnerSaldoprepago.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                parent.getItemIdAtPosition(position);
+
+                switch (position) {
+                    case (0):
+                        Toast.makeText(getView().getContext(), "Por favor seleccionar una opcion" + position, Toast.LENGTH_SHORT).show();
+                        break;
+                    case (1):
+                        nombreRecarga.setText("Telefono Prepago Local");
+                        Montorecarga.setText("" + totalsaldotelefono);
+                        break;
+                    case (2):
+                        nombreRecarga.setText("Internet Prepago");
+                        Montorecarga.setText("" + totalsaldoInternet);
+                        break;
+                }
+
 
             }
 

@@ -199,138 +199,13 @@
         </android.support.v7.widget.CardView>
 
 
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardViewPago"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="220dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?android:attr/selectableItemBackground"
-            card_view:cardBackgroundColor="#FFFF"
-            card_view:cardCornerRadius="4dp">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-
-            <TextView
-                android:id="@+id/title2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:gravity="center_horizontal"
-                android:background="#ffff"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:text="ESTADO DE AVERIAS"
-                />
-
-
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp">
-
-
-                <TextView
-                    android:id="@+id/TextnumerodeSolicitud"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:text="N°SOLICITUD :"
-                    android:textSize="16dp"
-                    android:background="#FFFF"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/numeroDeSolicitud"
-                    android:layout_width="fill_parent"
-                    android:layout_height="25dp"
-                    android:textSize="16dp"
-                    android:layout_alignBottom="@+id/linearLayout"
-                    android:layout_alignParentEnd="true"
-                    android:background="#FFFFFF"
-                    android:text="NUMERO DE SOLICITUD"
-                    android:gravity="right"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingTop="5dp">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:text="ESTADO :"
-                    android:textSize="16dp"
-                    android:background="#FFFF"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/estatuDeLaSolicitud"
-                    android:layout_width="fill_parent"
-                    android:layout_height="25dp"
-                    android:textSize="16dp"
-                    android:layout_alignBottom="@+id/linearLayout"
-                    android:layout_alignParentEnd="true"
-                    android:background="#FFFFFF"
-                    android:text="ESTATUS DE LA SOLICITUD"
-                    android:gravity="right"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:paddingTop="5dp">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="90dp"
-                    android:background="#FFFF"
-                    android:text="INFORMACIÓN :"
-                    android:textSize="16dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/informacionDeLaSolicitud"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_alignBottom="@+id/linearLayout"
-                    android:layout_alignParentEnd="true"
-                    android:background="#FFFFFF"
-                    android:text="INFORMACIÓN DE LA SOLCITUD"
-                    android:textSize="16dp"
-                    android:gravity="right"/>
-
-            </LinearLayout>
-
-            </LinearLayout>
-
-
-        </android.support.v7.widget.CardView>
 
 
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/cardViewStatusServicios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="370dp"
+        android:layout_marginTop="220dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
@@ -454,12 +329,42 @@
                     android:gravity="right"/>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="PLAN LOCAL: "
+                    android:textSize="16dp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textPlanLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:text=" Plan local"
+                    android:gravity="right"/>
+            </LinearLayout>
+
             </LinearLayout>
 
 
     </android.support.v7.widget.CardView>
 
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/webview"
+        android:layout_marginTop="410dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        />
 
 
 

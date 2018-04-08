@@ -51,7 +51,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/numeroAveria"
+                android:id="@+id/numeroreclamo"
                 android:layout_width="fill_parent"
                 android:layout_height="25dp"
                 android:textSize="16dp"
@@ -78,7 +78,7 @@
                 android:textStyle="bold"/>
 
             <TextView
-                android:id="@+id/estatusAveria"
+                android:id="@+id/estatusReclamo"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:textSize="16dp"

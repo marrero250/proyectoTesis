@@ -38,19 +38,27 @@
     </string-array>
 
     <string-array name="Recarga_Prepago">
-        <item>Telefono Local</item>
+        <item>Seleccione</item>
+        <item>Telefono Local Prepago</item>
         <item>Internet Prepago</item>
     </string-array>
 
 
     <string-array name="Reporte_Averias">
-        <item></item>
+        <item>Seleccione</item>
         <item>No tengo tono telefonico</item>
         <item>Mi modem no enciende</item>
         <item>No tengo servicio de internet</item>
         <item>Otro(especificar)</item>
-
     </string-array>
+
+
+    <string-array name="Reclamos">
+        <item>Seleccione</item>
+        <item>Facturacion incorrecta</item>
+    </string-array>
+
+    <string name="webplaneslocales1"> <a href="http://www.cantv.com.ve/"> PRUEBA DE ENLACE</a></string>
 
 
 
